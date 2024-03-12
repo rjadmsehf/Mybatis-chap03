@@ -31,10 +31,11 @@ public class Application {
             System.out.println("3. 신규 메뉴 등록하기");
             System.out.println("4. 메뉴 수정하기");
             System.out.println("5. 메뉴 삭제하기");
+            System.out.println("6. 시스템 종료하기 ");
             System.out.print("몌뉴 관리 번호를 입력해주세요 : ");
 
             int no = sc.nextInt();
-
+            boolean end =false;
             switch (no){
 
                 case 1 : menuController.selectAllMenu(); break;
@@ -48,9 +49,15 @@ public class Application {
 
                 case 5 : menuController.deleteMenu(inputMenuCode()); break;
 
+                case 6 : end = true; break;
                 default:
                     System.out.println("잘못된 메뉴를 입력하셨습니다."); break;
 
+
+            }
+            if(end){
+                System.out.println("시스템을 종료합니다 ");
+                break;
             }
 
         }while (true);
