@@ -46,7 +46,6 @@ public class Application {
 
                 case 4 : menuController.updateMenu(updateMenu()); break;
 
-
                 case 5 : menuController.deleteMenu(inputMenuCode()); break;
 
                 case 6 : end = true; break;
